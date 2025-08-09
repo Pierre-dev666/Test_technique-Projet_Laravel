@@ -2,6 +2,29 @@
 
     <h2 class="text-xl font-bold mb-4">Réserver une propriété</h2>
 
+    {{-- Messages de succès / erreur --}}
+    @if (session()->has('message'))
+        <div 
+            x-data="{ show: true }" 
+            x-show="show" 
+            x-init="setTimeout(() => show = false, 4000)" 
+            class="mb-4 p-3 text-green-800 bg-green-200 rounded"
+        >
+            {{ session('message') }}
+        </div>
+    @endif
+
+    @if (session()->has('error'))
+        <div 
+            x-data="{ show: true }" 
+            x-show="show" 
+            x-init="setTimeout(() => show = false, 4000)" 
+            class="mb-4 p-3 text-red-800 bg-red-200 rounded"
+        >
+            {{ session('error') }}
+        </div>
+    @endif
+
     <div class="mb-4">
         <label for="property" class="block mb-1">Propriété</label>
         <select wire:model="selectedProperty" id="property" class="w-full border rounded px-3 py-2">

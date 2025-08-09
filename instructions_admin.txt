@@ -1,0 +1,60 @@
+Instructions pour administrateur
+=================================
+
+Connexion à l'espace administrateur
+------------------------------------
+1. Ouvrir un navigateur web.
+2. Accéder à l'adresse : http://localhost:8000/admin
+3. Entrer les identifiants suivants :
+
+   Email : johndoe@test.com
+   Mot de passe : password01
+
+Fonctionnalités dans l'espace admin :
+-------------------------------------
+- Créer / Modifier / Supprimer des propriétés
+- Consulter et gérer toutes les réservations
+- Ajouter ou modifier un utilisateur
+- Annuler une réservation existante
+- Filtrer et rechercher dans la liste des réservations
+
+Recommandations :
+-----------------
+- Modifier régulièrement le mot de passe de John Doe
+- Créer des comptes admin pour les autres gestionnaires si nécessaire
+- Sauvegarder la base de données régulièrement
+
+
+-------------------------------------
+Fonctionnement pour un utilisateur non-administrateur
+-------------------------------------
+
+Connexion à l'espace administrateur
+------------------------------------
+1. Ouvrir un navigateur web.
+2. Accéder à l'adresse : http://localhost:8000
+
+Accès :
+-------
+- L'utilisateur doit créer un compte via l'écran d'inscription
+- Ou se connecter avec un compte existant via l'écran de connexion
+
+Fonctionnalités disponibles :
+-----------------------------
+- Voir la liste des propriétés disponibles
+- Sélectionner une propriété à réserver
+- Choisir une date de début et une date de fin
+- Valider la réservation si les dates sont disponibles
+- Recevoir un message de confirmation après la réservation
+- Consulter l’historique de ses réservations
+
+Restrictions :
+--------------
+- Ne peut pas accéder à l'espace `/admin`
+- Ne peut pas modifier ou supprimer des propriétés
+- Ne peut pas voir les réservations des autres utilisateurs
+
+Notes :
+-------
+- Toute tentative d’accès à `/admin` sans être administrateur redirige vers la page de connexion
+- Les dates de réservation sont automatiquement vérifiées pour éviter les doublons
